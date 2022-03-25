@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        <bean id="user" class="com.robin.pojo.User">
+            <property name="name" value="Yijian Li"></property>
+            <constructor-arg index="0" value="Robin"/>
+        </bean>
+
+        <bean id="user" class="com.robin.pojo.User">
+            <constructor-arg type = "java.lang.String" value="Yijian"/>
+        </bean>
+    -->
+    <bean id="user" class="com.robin.pojo.User">
+        <constructor-arg name = "name" value="Robin"/>
+    </bean>
+
+
+</beans>

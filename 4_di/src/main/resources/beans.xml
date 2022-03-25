@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "address" class="com.robin.pojo.Address"/>
+
+    <bean id="student" class="com.robin.pojo.Student">
+        <!--常量值注入，value-->
+        <property name = "name" value="Robin"/>
+
+        <!--Bean 注入， ref-->
+        <property name="address" ref="address"/>
+
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>三国演义</value>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+
+        <!--List-->
+        <property name="hobbies">
+            <list>
+                <value>Basketball</value>
+                <value>Music</value>
+                <value>Tennis</value>
+            </list>
+        </property>
+
+        <!--Map-->
+        <property name="card">
+            <map>
+                <entry key = "李伊健" value="15073039072"/>
+                <entry key = "RobinLi"  value="2244206315"></entry>
+            </map>
+        </property>
+
+        <!--Set-->
+        <property name="games">
+            <set>
+                <value>LoL</value>
+                <value>CSGO</value>
+            </set>
+        </property>
+
+        <!--NULL-->
+        <property name="wife">
+            <null></null>
+        </property>
+
+        <!--Properties-->
+        <property name="info">
+            <props>
+                <prop key="index">55</prop>
+                <prop key="sex">男</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
