@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace=绑定一个对应的Dao/Mapper接口
+     注意：这里的namespace路径一定要正确，否则会报找不到该类型接口的错误 -->
+<mapper namespace="com.robin.mapper.UserMapper">
+
+    <!-- 查询所有用户信息 -->
+    <!-- 当通过包起别名后，resultType(结果类型)直接使用对应实体类名即可，不需要写全类名 -->
+    <select id="getUsers" resultType="user">
+        Select * from  mybatis.user;
+    </select>
+
+</mapper>
