@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- configuration：核心配置文件 -->
+<configuration>
+
+    <!-- 在spring核心配置文件中绑定ybatis的配置文件后，
+        一般情况下可以选择只把设置和别名放在mybatis的配置文件中
+         注意：setting要放在typeAliases标签前面使用 -->
+
+    <!-- 设置标准日志输出 -->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!-- 使用别名：通过包起别名 -->
+    <typeAliases>
+        <package name="com.robin.pojo"/>
+    </typeAliases>
+
+</configuration>
+

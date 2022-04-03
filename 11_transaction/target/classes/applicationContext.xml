@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd"
+>
+    <!-- 在总的配置文件中导入spring-dao.xml配置文件即可 -->
+    <import resource="spring-dao.xml"/>
+
+    <!-- 方式二：继承SqlSessionDaoSupport对象 -->
+    <bean id="userMapper" class="com.robin.dao.UserMapperImpl">
+        <!-- 当使用SqlSessionDaoSupport时，
+             需要通过属性设置一个sqlSessionFactory"或者SqlSessionTemplate
+             如果两个属性都设置了，那么"sqlSessionFactory将会被忽略 -->
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+
+
+
+
+
+</beans>
